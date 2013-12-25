@@ -7,28 +7,65 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css" type="text/css" media="screen" />
 </head>
 <body>
-<!-- #17 tooltip, popover -->
+<!-- #18 carousel -->
 
     <div class="container" style="padding:20px 0;">
 
-        <p style="margin-top:200px;">
-            <a href="#" data-toggle="tooltip" title="explanation">this</a> and
-            <a href="#" data-toggle="popover" title="explanation" data-content="more explanation Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.">that</a>.
-        </p>
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img style="height:300px;margin:0 auto;" src="./img/shinchoku-alice-basic.png" alt="shinchoku-alice-basic">
+                <div class="carousel-caption">
+                    どうですか！
+                </div>
+            </div>
+            <div class="item">
+                <img style="height:300px;margin:0 auto;" src="./img/shinchoku-karen-basic.png" alt="shinchoku-karen-basic">
+                <div class="carousel-caption">
+                    どうですか！
+                </div>
+            </div>
+            <div class="item">
+                <img style="height:300px;margin:0 auto;" src="./img/shinchoku-alice-icon-like.jpg" alt="shinchoku-alice-icon-like">
+                <div class="carousel-caption">
+                    どうですか！
+                </div>
+            </div>
+            <div class="item">
+                <img style="height:300px;margin:0 auto;" src="./img/shinchoku-alice-anime.gif" alt="shinchoku-alice-anime">
+                <div class="carousel-caption">
+                    どうですか！
+                </div>
+            </div>
+            <div class="item">
+                <img style="height:300px;margin:0 auto;" src="./img/shinchoku-alice-hakuyoku.jpg" alt="shinchoku-alice-hakuyoku">
+                <div class="carousel-caption">
+                    どうですか！
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+        </div>
+
 
     </div>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="./js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
-    <script>
-        $(function(){
-            $("[data-toggle=tooltip]").tooltip({
-                placement: 'bottom'
-            });
-            $("[data-toggle=popover]").popover({
-                placement: 'bottom'
-            });
-        });
-    </script>
 </body>
 </html>
