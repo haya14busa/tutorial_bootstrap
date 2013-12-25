@@ -7,40 +7,28 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css" type="text/css" media="screen" />
 </head>
 <body>
-<!-- #16 Tab menu -->
+<!-- #17 tooltip, popover -->
 
     <div class="container" style="padding:20px 0;">
-        <ul class="nav nav-tabs">
-            <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
-            <li><a href="#link1" data-toggle="tab">Link</a></li>
-            <li><a href="#link2" data-toggle="tab">Link</a></li>
-        </ul>
 
-        <div class="tab-content">
-            <div class="tab-pane active" id="home">
-                <h2>Home!</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-            </div>
-            <div class="tab-pane" id="link1">
-                <h2>link1</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-            </div>
-            <div class="tab-pane" id="link2">
-                <h2>link2</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-            </div>
-        </div>
+        <p style="margin-top:200px;">
+            <a href="#" data-toggle="tooltip" title="explanation">this</a> and
+            <a href="#" data-toggle="popover" title="explanation" data-content="more explanation Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.">that</a>.
+        </p>
 
-        </div>
     </div>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="./js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        $(function(){
+            $("[data-toggle=tooltip]").tooltip({
+                placement: 'bottom'
+            });
+            $("[data-toggle=popover]").popover({
+                placement: 'bottom'
+            });
+        });
+    </script>
 </body>
 </html>
